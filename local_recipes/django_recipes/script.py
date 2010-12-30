@@ -75,14 +75,13 @@ application = wsgi.WSGIHandler()
 """
 
 manage_template = """
-import os
 import sys
 
 sys.path[0:0] = [
     %(path)s,
 ]
 
-import manage
+from src import manage
 
 if __name__ == '__main__':
     manage.main()
